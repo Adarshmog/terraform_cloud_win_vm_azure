@@ -20,6 +20,7 @@ resource "azurerm_public_ip" "publicip" {
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   allocation_method   = "Static"
+  sku                 = "Standard"
 }
 
 resource "azurerm_network_security_group" "nsg" {
